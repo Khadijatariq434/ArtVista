@@ -1,0 +1,40 @@
+# --- Node.js dependencies ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Environment variables ---
+.env
+*.env
+backend/.env
+frontend/.env
+
+# --- Build outputs ---
+dist/
+build/
+frontend/build/
+backend/dist/
+
+# --- Logs ---
+logs
+*.log
+logs/*.log
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Editor folders ---
+.vscode/
+.idea/
+
+# --- Coverage / test output ---
+coverage/
+*.lcov
+
+# --- Cache ---
+.cache/
+.next/
+out/
