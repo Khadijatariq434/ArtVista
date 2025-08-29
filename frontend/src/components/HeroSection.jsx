@@ -72,8 +72,11 @@ const HeroSection = () => {
   return (
     <div 
       ref={sectionRef}
-      className="relative bg-beige-50 py-16 md:py-20 overflow-hidden"
+      className="relative bg-beige-50 py-16 md:py-20 overflow-hidden font-sans"
     >
+      {/* Add Google Fonts link */}
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+      
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmOGY2ZjIiIGZpbGwtb3BhY2l0eT0iMC40Ij48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
       
       <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
@@ -84,18 +87,18 @@ const HeroSection = () => {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}>
                 <div className="w-2 h-2 bg-gray-800 rounded-full"></div>
-                <span className="text-sm font-light text-gray-600 tracking-wide">
+                <span className="text-sm font-light text-gray-600 tracking-wide uppercase font-inter">
                   DISCOVER EXCEPTIONAL ART
                 </span>
               </div>
               
-              <h1 className={`text-4xl md:text-5xl lg:text-6xl font-light text-gray-800 leading-tight tracking-tight transition-all duration-1000 ease-out ${
+              <h1 className={`text-4xl md:text-5xl lg:text-6xl text-gray-800 leading-tight tracking-tight transition-all duration-1000 ease-out font-playfair ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}>
-                Welcome to <span className="font-normal">ArtVista</span>
+                Welcome to <span className="font-semibold italic">ArtVista</span>
               </h1>
               
-              <p className={`text-lg text-gray-600 leading-relaxed font-light transition-all duration-1000 ease-out delay-150 ${
+              <p className={`text-lg text-gray-600 leading-relaxed transition-all duration-1000 ease-out delay-150 font-inter ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}>
                 Where creativity meets connection. Explore extraordinary artworks, 
@@ -115,26 +118,26 @@ const HeroSection = () => {
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="font-normal text-gray-800">{feature.title}</h3>
-                    <p className="text-gray-600 text-sm font-light">{feature.description}</p>
+                    <h3 className="font-medium text-gray-800 font-inter">{feature.title}</h3>
+                    <p className="text-gray-600 text-sm font-light font-inter">{feature.description}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className={`grid grid-cols-3 gap-6 pt-4 border-t border-gray-200 transition-all duration-1000 ease-out delay-500 ${
+            <div className={`grid grid-cols-3 gap-6 pt-4 border-t border-gray-200 transition-all duration-1000 ease-out delay-500 font-inter ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}>
               <div className="text-center">
-                <div className="text-xl font-normal text-gray-800">500+</div>
+                <div className="text-xl font-semibold text-gray-800">500+</div>
                 <div className="text-xs text-gray-600 font-light">Artworks</div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-normal text-gray-800">200+</div>
+                <div className="text-xl font-semibold text-gray-800">200+</div>
                 <div className="text-xs text-gray-600 font-light">Artists</div>
               </div>
               <div className="text-center">
-                <div className="text-xl font-normal text-gray-800">95%</div>
+                <div className="text-xl font-semibold text-gray-800">95%</div>
                 <div className="text-xs text-gray-600 font-light">Satisfied</div>
               </div>
             </div>
@@ -144,14 +147,14 @@ const HeroSection = () => {
             }`}>
               <button 
                 onClick={handleExploreGallery}
-                className="bg-gray-800 hover:bg-gray-700 text-white font-light px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center transform hover:scale-105"
+                className="bg-gray-800 hover:bg-gray-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center transform hover:scale-105 font-inter"
               >
                 Explore Gallery
                 <ArrowRight className="ml-2 h-4 w-4" />
               </button>
               <button 
                 onClick={handleBecomeArtist}
-                className="border border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-800 font-light px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="border border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-800 font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 font-inter"
               >
                 Become an Artist
               </button>
@@ -179,7 +182,7 @@ const HeroSection = () => {
                     <div className="text-white">
                       <div className="flex items-center space-x-1">
                         <div className="w-1 h-1 bg-white rounded-full"></div>
-                        <span className="text-xs font-light">View details</span>
+                        <span className="text-xs font-light font-inter">View details</span>
                       </div>
                     </div>
                   </div>
@@ -210,6 +213,14 @@ const HeroSection = () => {
         }
         .hover\\:bg-beige-100:hover {
           background-color: #f0ebe4;
+        }
+        
+        /* Font classes */
+        .font-playfair {
+          font-family: 'Playfair Display', serif;
+        }
+        .font-inter {
+          font-family: 'Inter', sans-serif;
         }
         
         /* Custom delay classes */
